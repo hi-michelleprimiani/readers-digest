@@ -1,0 +1,65 @@
+[
+    {
+        "model": "rockapi.bookcategory",
+        "pk": 1,
+        "fields": {
+            "book": 1,
+            "category": 1,
+            "datetime": "2023-11-06T08:00:00Z"
+        }
+    },
+    {
+        "model": "rockapi.bookcategory",
+        "pk": 2,
+        "fields": {
+            "book": 2,
+            "category": 2,
+            "datetime": "2023-11-06T09:00:00Z"
+        }
+    },
+    {
+        "model": "rockapi.bookcategory",
+        "pk": 3,
+        "fields": {
+            "book": 3,
+            "category": 3,
+            "datetime": "2023-11-06T10:00:00Z"
+        }
+    },
+    {
+        "model": "rockapi.bookcategory",
+        "pk": 4,
+        "fields": {
+            "book": 4,
+            "category": 4,
+            "datetime": "2023-11-06T11:00:00Z"
+        }
+    },
+    {
+        "model": "rockapi.bookcategory",
+        "pk": 5,
+        "fields": {
+            "book": 5,
+            "category": 5,
+            "datetime": "2023-11-06T12:00:00Z"
+        }
+    },
+    {
+        "model": "rockapi.bookcategory",
+        "pk": 6,
+        "fields": {
+            "book": 6,
+            "category": 6,
+            "datetime": "2023-11-06T13:00:00Z"
+        }
+    },
+    {
+        "model": "rockapi.bookcategory",
+        "pk": 7,
+        "fields": {
+            "book": 7,
+            "category": 7,
+            "datetime": "2023-11-06T14:00:00Z"
+        }
+    }
+]

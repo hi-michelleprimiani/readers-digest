@@ -1,0 +1,57 @@
+[
+    {
+    "model": "digestapi.review",
+    "pk": 1,
+    "fields": {
+        "book": 1,
+        "user": 1,
+        "rating": 5,
+        "comments": "A timeless classic that resonates with every reading.",
+        "date": "2023-01-15"
+    }
+},
+{
+    "model": "digestapi.review",
+    "pk": 2,
+    "fields": {
+        "book": 2,
+        "user": 2,
+        "rating": 4,
+        "comments": "A compelling narrative that weaves an intricate web of themes.",
+        "date": "2023-02-20"
+    }
+},
+{
+    "model": "digestapi.review",
+    "pk": 3,
+    "fields": {
+        "book": 3,
+        "user": 3,
+        "rating": 3,
+        "comments": "Interesting read, though the pacing felt slow at times.",
+        "date": "2023-03-05"
+    }
+},
+{
+    "model": "digestapi.review",
+    "pk": 4,
+    "fields": {
+        "book": 4,
+        "user": 4,
+        "rating": 5,
+        "comments": "A masterpiece of character development and narrative.",
+        "date": "2023-04-10"
+    }
+},
+{
+    "model": "digestapi.review",
+    "pk": 5,
+    "fields": {
+        "book": 5,
+        "user": 5,
+        "rating": 2,
+        "comments": "Didn't live up to the hype for me, but still an okay read.",
+        "date": "2023-04-22"
+    }
+}
+]
