@@ -2,13 +2,20 @@ from rest_framework import viewsets, status
 from rest_framework.response import Response
 from rest_framework import serializers
 from digestapi.models import Book
+# from .categories import CategorySerializer
 from .categories import CategorySerializer
 
 
 class BookSerializer(serializers.ModelSerializer):
-    is_owner = serializers.SerializerMethodField()
+    # Override default serialization to replace foreign keys
+    # with expanded related resource. By default, this would
+    # be a list of integers (e.g. [2, 4, 9]).
     categories = CategorySerializer(many=True)
 
+    # Declare that an ad-hoc property should be included in JSON
+    is_owner = serializers.SerializerMethodField()
+
+    # Function containing instructions for ad-hoc property
     def get_is_owner(self, obj):
         # Check if the authenticated user is the owner
         return self.context['request'].user == obj.user
@@ -24,7 +31,10 @@ class BookViewSet(viewsets.ViewSet):
     def list(self, request):
         books = Book.objects.all()
         serializer = BookSerializer(
-            books, many=True, context={'request': request})
+            books,
+            many=True,
+            context={'request': request}  # Allow serializer to access request
+        )
         return Response(serializer.data)
 
     def retrieve(self, request, pk=None):
@@ -52,8 +62,9 @@ class BookViewSet(viewsets.ViewSet):
             cover_image=cover_image,
             isbn_number=isbn_number)
 
-        # Establish the many-to-many relationships
+        # Get the list of [3, 5] from the request payload
         category_ids = request.data.get('categories', [])
+        # Assign categories 3 and 5 to the new book 12 with one line of code
         book.categories.set(category_ids)
 
         serializer = BookSerializer(book, context={'request': request})
