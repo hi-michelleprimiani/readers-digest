@@ -9,7 +9,7 @@ class ReviewSerializer(serializers.ModelSerializer):
     class Meta:
         model = Review
         fields = ['id', 'book', 'user', 'rating',
-                  'comment', 'date_posted', 'is_owner']
+                  'comments', 'date', 'is_owner']
         read_only_fields = ['user']
 
     def get_is_owner(self, obj):
@@ -18,7 +18,6 @@ class ReviewSerializer(serializers.ModelSerializer):
 
 
 class ReviewViewSet(viewsets.ViewSet):
-    permission_classes = [permissions.AllowAny]
 
     def list(self, request):
         # Get all reviews
@@ -32,19 +31,15 @@ class ReviewViewSet(viewsets.ViewSet):
 
     def create(self, request):
         # Create a new instance of a review and assign property
-        chosen_book = Book.objects.get(pk=request.data['bookId'])
+        review = Review()
+        chosen_book = Book.objects.get(pk=request.data['book'])
         # values from the request payload using `request.data`
-        user = request.auth.user
-        book = chosen_book
-        rating = request.data.get('rating')
-        comments = request.data.get('comments')
+        review.user = request.auth.user
+        review.book = chosen_book
+        review.rating = request.data.get('rating')
+        review.comments = request.data.get('comments')
         # Save the review
-        review = Review.objects.create(
-            user=user,
-            book=book,
-            rating=rating,
-            comments=comments,
-        )
+        review.save()
         try:
             # Serialize the objects, and pass request as context
             serializer = ReviewSerializer(review, context={'request': request})
