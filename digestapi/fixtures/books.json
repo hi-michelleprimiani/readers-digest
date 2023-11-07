@@ -53,7 +53,7 @@
         "model": "digestapi.book",
         "pk": 5,
         "fields": {
-            "user": 3,
+            "user": 2,
             "title": "Great Expectations",
             "author": "Charles Dickens",
             "isbn_number": "1234567890137",
@@ -89,7 +89,7 @@
         "model": "digestapi.book",
         "pk": 8,
         "fields": {
-            "user": 3,
+            "user": 1,
             "title": "Frankenstein",
             "author": "Mary Shelley",
             "isbn_number": "1234567890131",
@@ -125,7 +125,7 @@
         "model": "digestapi.book",
         "pk": 11,
         "fields": {
-            "user": 3,
+            "user": 1,
             "title": "Catch-22",
             "author": "Joseph Heller",
             "isbn_number": "1234567890142",
@@ -137,7 +137,7 @@
         "model": "digestapi.book",
         "pk": 12,
         "fields": {
-            "user": 4,
+            "user": 2,
             "title": "The Sun Also Rises",
             "author": "Ernest Hemingway",
             "isbn_number": "1234567890143",

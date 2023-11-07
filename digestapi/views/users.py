@@ -1,4 +1,4 @@
-from rest_framework import viewsets, status
+from rest_framework import viewsets, status, permissions
 from rest_framework.decorators import action
 from rest_framework.response import Response
 from rest_framework import serializers
@@ -17,6 +17,7 @@ class UserSerializer(serializers.ModelSerializer):
 
 class UserViewSet(viewsets.ViewSet):
     queryset = User.objects.all()
+    permission_classes = [permissions.AllowAny]
 
     @action(detail=False, methods=['post'], url_path='register')
     def register_account(self, request):
