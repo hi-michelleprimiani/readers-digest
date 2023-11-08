@@ -3,11 +3,11 @@
         "model": "digestapi.book",
         "pk": 1,
         "fields": {
-            "user": 1,
+            "user": 7,
             "title": "The Great Gatsby",
             "author": "F. Scott Fitzgerald",
             "isbn_number": "1234567890123",
-            "cover_image": "https://example.com/covers/greatgatsby.jpg",
+            "cover_image": "https://upload.wikimedia.org/wikipedia/commons/7/7a/The_Great_Gatsby_Cover_1925_Retouched.jpg",
             "categories": [1, 2]
         }
     },
@@ -15,11 +15,11 @@
         "model": "digestapi.book",
         "pk": 2,
         "fields": {
-            "user": 2,
+            "user": 8,
             "title": "1984",
             "author": "George Orwell",
             "isbn_number": "1234567890123",
-            "cover_image": "https://example.com/covers/1984.jpg",
+            "cover_image": "https://prodimage.images-bn.com/pimages/9780451524935_p0_v5_s1200x630.jpg",
             "categories": [2, 3]
         }
     },
@@ -27,11 +27,11 @@
         "model": "digestapi.book",
         "pk": 3,
         "fields": {
-            "user": 1,
+            "user": 9,
             "title": "Crime and Punishment",
             "author": "Fyodor Dostoevsky",
             "isbn_number": "1234567890135",
-            "cover_image": "https://example.com/images/crime.jpg",
+            "cover_image": "https://target.scene7.com/is/image/Target/GUEST_260a9732-dccc-4822-af82-ab5e6c48c154?wid=488&hei=488&fmt=pjpeg",
             "categories": [2, 4]
         }
     },
@@ -40,11 +40,11 @@
         "model": "digestapi.book",
         "pk": 4,
         "fields": {
-            "user": 2,
+            "user": 7,
             "title": "War and Peace",
             "author": "Leo Tolstoy",
             "isbn_number": "1234567890136",
-            "cover_image": "https://example.com/images/warpeace.jpg",
+            "cover_image": "https://m.media-amazon.com/images/I/A1aDb5U5myL._AC_UF1000,1000_QL80_.jpg",
             "categories": [1, 3]
         }
     },
@@ -53,11 +53,11 @@
         "model": "digestapi.book",
         "pk": 5,
         "fields": {
-            "user": 2,
+            "user": 10,
             "title": "Great Expectations",
             "author": "Charles Dickens",
             "isbn_number": "1234567890137",
-            "cover_image": "https://example.com/images/expectations.jpg",
+            "cover_image": "https://m.media-amazon.com/images/I/51pqUWvj6NL.jpg",
             "categories": [2, 3]
         }
     },
@@ -65,11 +65,11 @@
         "model": "digestapi.book",
         "pk": 6,
         "fields": {
-            "user": 1,
+            "user": 9,
             "title": "Jane Eyre",
             "author": "Charlotte Brontë",
             "isbn_number": "1234567890129",
-            "cover_image": "https://example.com/images/jane_eyre.jpg",
+            "cover_image": "https://images.penguinrandomhouse.com/cover/9780307455192",
             "categories": [3, 5]
         }
     },
@@ -77,11 +77,11 @@
         "model": "digestapi.book",
         "pk": 7,
         "fields": {
-            "user": 2,
+            "user": 8,
             "title": "Wuthering Heights",
             "author": "Emily Brontë",
             "isbn_number": "1234567890130",
-            "cover_image": "https://example.com/images/wuthering_heights.jpg",
+            "cover_image": "https://m.media-amazon.com/images/I/81dvA4tU0rL._AC_UF1000,1000_QL80_.jpg",
             "categories": [5, 6]
         }
     },
@@ -89,11 +89,11 @@
         "model": "digestapi.book",
         "pk": 8,
         "fields": {
-            "user": 1,
+            "user": 9,
             "title": "Frankenstein",
             "author": "Mary Shelley",
             "isbn_number": "1234567890131",
-            "cover_image": "https://example.com/images/frankenstein.jpg",
+            "cover_image": "https://m.media-amazon.com/images/I/515zE1GxvAL._AC_UF1000,1000_QL80_.jpg",
             "categories": [2, 3]
         }
     },
@@ -101,11 +101,11 @@
         "model": "digestapi.book",
         "pk": 9,
         "fields": {
-            "user": 1,
+            "user": 11,
             "title": "The Grapes of Wrath",
             "author": "John Steinbeck",
             "isbn_number": "1234567890140",
-            "cover_image": "https://example.com/images/grapesofwrath.jpg",
+            "cover_image": "https://upload.wikimedia.org/wikipedia/commons/c/c1/The_Grapes_of_Wrath_%281940_poster%29.jpg",
             "categories": [2, 3]
         }
     },
@@ -113,11 +113,11 @@
         "model": "digestapi.book",
         "pk": 10,
         "fields": {
-            "user": 2,
+            "user": 8,
             "title": "Brave New World",
             "author": "Aldous Huxley",
             "isbn_number": "1234567890141",
-            "cover_image": "https://example.com/images/bravenewworld.jpg",
+            "cover_image": "https://m.media-amazon.com/images/I/71aDrgLp9CL._AC_UF1000,1000_QL80_.jpg",
             "categories": [2, 3]
         }
     },
@@ -125,11 +125,11 @@
         "model": "digestapi.book",
         "pk": 11,
         "fields": {
-            "user": 1,
+            "user": 9,
             "title": "Catch-22",
             "author": "Joseph Heller",
             "isbn_number": "1234567890142",
-            "cover_image": "https://example.com/images/catch22.jpg",
+            "cover_image": "https://m.media-amazon.com/images/I/61y5K2gy6pL._AC_UF1000,1000_QL80_.jpg",
             "categories": [2, 1]
         }
     },
@@ -137,11 +137,11 @@
         "model": "digestapi.book",
         "pk": 12,
         "fields": {
-            "user": 2,
+            "user": 10,
             "title": "The Sun Also Rises",
             "author": "Ernest Hemingway",
             "isbn_number": "1234567890143",
-            "cover_image": "https://example.com/images/sunalsorises.jpg",
+            "cover_image": "https://m.media-amazon.com/images/I/51JcUQis+vL.jpg",
             "categories": [4, 3]
         }
     }    
