@@ -3,7 +3,7 @@ from rest_framework.decorators import action
 from rest_framework.response import Response
 from rest_framework import serializers
 from rest_framework.authtoken.models import Token
-
+from django.core.exceptions import ObjectDoesNotExist
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate
 
@@ -11,7 +11,7 @@ from django.contrib.auth import authenticate
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ['id', 'username', 'password']
+        fields = ['id', 'username', 'password', 'first_name', 'last_name']
         extra_kwargs = {'password': {'write_only': True}}
 
 
@@ -25,7 +25,10 @@ class UserViewSet(viewsets.ViewSet):
         if serializer.is_valid():
             user = User.objects.create_user(
                 username=serializer.validated_data['username'],
-                password=serializer.validated_data['password']
+                password=serializer.validated_data['password'],
+                first_name=serializer.validated_data['first_name'],
+                last_name=serializer.validated_data['last_name'],
+                email=serializer.validated_data['username']
             )
             token, created = Token.objects.get_or_create(user=user)
             return Response({"token": token.key}, status=status.HTTP_201_CREATED)
