@@ -1,10 +1,19 @@
-from rest_framework import viewsets, status, serializers, permissions
+from rest_framework import viewsets, status, serializers
 from rest_framework.response import Response
+from django.contrib.auth.models import User
 from digestapi.models import Review, Book
+
+
+class UserReviewSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = User
+        fields = ['first_name', 'last_name']
 
 
 class ReviewSerializer(serializers.ModelSerializer):
     is_owner = serializers.SerializerMethodField()
+    user = UserReviewSerializer(many=False)
 
     class Meta:
         model = Review
